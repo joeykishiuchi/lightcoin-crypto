@@ -13,7 +13,7 @@ class Account {
     return balance;
   }
   addTransaction(transaction) {
-    if(transaction.isAllowed()) {
+    if (transaction.isAllowed()) {
       this.transactions.push(transaction);
     }
   }
@@ -26,7 +26,7 @@ class Transaction {
   }
 
   commit() {
-    if(this.isAllowed()) {
+    if (this.isAllowed()) {
       this.time = new Date();
     this.account.addTransaction(this);
     }
